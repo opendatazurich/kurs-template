@@ -69,43 +69,12 @@ Obwohl man gemäss des im Beispiel angezeigten Icons der Datei das Gefühl hätt
 
 <video src="https://user-images.githubusercontent.com/2479732/105727214-25f55680-5f2b-11eb-8d62-e1d64c5bbd65.mp4" controls="controls" muted="muted" style="max-height:640px;"><img alt="02_excelissue" src="https://user-images.githubusercontent.com/2479732/104017881-32528300-51b9-11eb-8d15-39debf3c426a.gif"/></video>
 
-
 Die CSV-Datei wird zwar in Excel geöffnet, es findet dabei jedoch keine Trennung der einzelnen Attribute in Spalten statt (vgl. mit der oben gezeigten Tabelle).
 Mit der hier gezeigten Vorgehensweise sind alle Werte in eine Spalte (hier Spalte A) eingefügt worden. Damit lässt sich nicht bequem weiterarbeiten.
-
-**Der Clou: CSV-Datei IMPORTIERTEN**
-
-Damit ihr wie erwartet, basierend auf einem CSV-Datensatz, in Excel weiterarbeiten könnt, solltet ihr den CSV-Datensatz **importieren**.
-Dazu könnt ihr folgendermassen vorgehen:
-
-- **Schritt 1:** Öffne eine neue leere Exceldatei und speichere Sie in Dein Verzeichnis, wo Du bereits die beiden CSV-Datensätze abgelegt hast ( `20200306_hundehalter.csv` und `BEV390OD3903.csv`). Gib dem Excelfile einen Namen, z.B. `Kleinkinder_und_Hunde.xlsx`.
-
-- **Schritt 2:** Gehe zum Menu **Daten** und klicke auf **Externe Daten abrufen**. Wähle aus allen angezeigten Optionen **Aus Text** aus.
-
-- **Schritt 3:** Mit dem Pop-Up **Textdatei importieren** wirst Du aufgefordert, die Textdatei auszuwählen, die Du nun ins Excelfile importieren möchtest. Wähle zuerst `20200306_hundehalter.csv` zum Import aus und klicke auf **Importieren**.
-
-- **Schritt 4:** Nun erscheint das Pop-Up mit dem **Textkonvertierungs-Assistenten**, welcher dich durch drei Importschritte führt.
-  - a) Wähle **Getrennt** aus, weil unsere Datensätze ja durch Kommas abgetrennt sind. Der Import beginnt in Zeile 1 und das CSV liegt in UTF-8 Kodierung vor. Aktiviere auch das Kästchen, dass die Datei Überschriften hat. Ganz unten siehst Du eine Vorschau, wie gemäss Deiner Auswahl der Import aussehen würde. Klicke nun auf **Weiter**.
-  - b) Im nächsten Dialogfeld musst Du nun die Trennzeichen definieren. In unserem Fall, resp. bei CSV, sollte dies immer **Komma** sein. Wähle es aus und beobachte die Veränderung in der Vorschau. Wenn Du zufrieden bist, klicke auf **Weiter**.
-  - c) Im letzten Dialogfeld kannst Du den Datentypen für jede Spalte definieren. Dies ist in den meisten Fällen nicht notwendig. In unserem Beispiel wurde noch explizit das Attribut Alter als Text definiert. Dies weil gewisse Werte von Excel z.T. auch als Datum interpretiert werden. Wenn Du zufrieden bist, klicke auf **Weiter**.  
-  
-- **Schritt 5:** Bestätige mit **OK** den Import in das aktuelle Arbeitsblatt Deines Excelfiles. Voilà, die Daten liegen nun so vor, dass Du mit den Hundedaten nun weiterarbeiten kannst.
-
-<video preload="none" poster="https://user-images.githubusercontent.com/538415/105816084-1f5ef180-5fb4-11eb-82c0-ae741ec1fcdf.jpg" src="https://user-images.githubusercontent.com/2479732/105727303-3c9bad80-5f2b-11eb-8f49-09dbaae53c0e.mp4" controls="controls" muted="muted" style="max-height:640px;"><img alt="03_csv_import" src="https://user-images.githubusercontent.com/2479732/104021668-747ec300-51bf-11eb-859d-23aecceabee3.gif"/></video>
-
-Damit sind wir fertig mit dem Datenimport. Unser Excelfile `Kleinkinder_und_Hunde.xlsx` beinhaltet nun zwei Arbeitsblätter mit den Hunde- und Bevölkerungsbestandsdaten, welche wir im nächsten Schritt analysieren werden.
 
 ## Datenauswertung mit Excel 
 Excel ist bezüglich Datenanalyse selbstverständlich nicht allererste Sahne.
 Fortgeschrittenere Datennutzende verwenden in der Regel eher Statistiktools wie **[R](https://www.r-project.org/)** (siehe dazu Ressourcen, wie [Rddj](https://rddj.info/) oder [RStudio Education](https://education.rstudio.com/blog/2020/05/remote-roundup/)) oder **[Python](https://www.python.org/)** (siehe dazu Ressourcen, wie [Data analysis with Python](https://csmastersuh.github.io/data_analysis_with_python_2020/ ) oder [Information Visualization](https://infovis.fh-potsdam.de/tutorials/)). 
-
-Excel bietet jedoch mehr und einfachere Datenanalysemöglichkeiten, als man auf den ersten Blick vielleicht annehmen würde.
-Für diesen Kurs möchten wir Euch das einfache Excel-Tool **[PivotCharts und PivotTable](https://support.microsoft.com/de-de/office/%C3%BCbersicht-%C3%BCber-pivottables-und-pivotcharts-527c8fa3-02c0-445a-a2db-7794676bce96)** etwas näher bringen.
-
-Wenn ihr Euch die eben importierten Daten anschaut, dann seht ihr, dass wir sie - um daraus Erkenntnisse zu gewinnen - im wesentlichen filtern und entsprechend summieren können müssen.
-PivotTable bietet diese Funktionalitäten sehr einfach, interaktiv und effizient an.
-PivotCharts ist eine Ergänzung von PivotTables und erlaubt ebenfalls ein einfaches interaktives visualisieren der Daten.
-Damit können auf einfache Weise Muster erkannt und Vergleiche angestellt werden.
 
 ### Anzahl Kleinkinder nach Stadtquartier
 Beginnen wir zuerst einmal damit herauszufinden, wie viele Kleinkinder es pro Stadtquartier am 31.12.2019 gab.
@@ -124,22 +93,6 @@ Beginnen wir zuerst einmal damit herauszufinden, wie viele Kleinkinder es pro St
   
 - **Schritt 4:** Damit haben wir nun bereits die erforderliche Tabelle und eine simple Grafik der Anzahl Kleinkinder pro Stadtquartier Ende 2019. Benenne das Arbeitsblatt wieder, z.B. mit `BevBest_Pivot`.
 
-### Anzahl Hunde nach Stadtquartier
-Als nächstes gehen wir analog der vorherigen Schritte vor und analysieren nun, wie viele Hunde es pro Stadtquartier Anfangs März 2020 gab.
-
-- **Schritt 1:** Wechsle ins Arbeitsblatt **Hundebestand_2020** und gehe erneut zum Menu **Einfügen**, klicke aufs **PivotChart-Icon** und wähle **PivotChart und PivotTable**.
-- **Schritt 2:** Mit dem Pop-Up **PivotTable erstellen** wirst Du wieder aufgefordert, den Tabellenbereich der analysiert werden soll auszuwählen. Dieses Mal sollte sich die Tabelle auf die pivotiert wird selbstverständlich auf den Hundebestand 2020 beziehen. Klicke danach auf **OK**.
-
-- **Schritt 3:** Im neuen Arbeitsblatt erscheinen erneut die leeren PivotTable- und PivotChart-Flächen. Auf der rechten Seite siehst Du nun die PivotTable-Felder aus dem aktuellen Datensatz des Hundebestands, welche Du wieder in die vier Bereiche ziehen kannst. 
-  - a) **WERTE**: hier werden die zu aggregierenden Wertefelder definiert. Dieses Mal gilt es zu beachten, dass wir kein Feld wie *Anzahl Hunde* oder ähnliches vorfinden. Dies liegt daran, dass jede Zeile in den Daten einem Hund entspricht. Die **Anzahl Hunde** finden wir jedoch heraus, indem wir das Attribut Halter-ID (`HALTER_ID`) auswählen und in der **Wertfeldeinstellung** (rechte Maustaste auf *Summe von HALTER_ID*) von Wertfeld zusammenfassen als Summe auf **Anzahl** wechseln. Die mit der Option Summe würden alle HALTER_IDs summiert werden, was ja keinen Sinn macht.
-  - b) **ZEILEN**: Dieses Mal kommen lediglich numerische Werte für die Stadtquartiere vor. Wir wählen hier daher die Stadtquartier-IDs (`STADTQUARTIER`) aus. 
-  - c) **SPALTEN**: auch hier könnten weitere Ausprägungen ausgewählt werden, wie z.B. die Rasse, die Farbe, das Geburtsjahr oder das Geschlecht des Hundes. Für unsere Fragestellung sind diese Attribute jedoch nicht relevant. Deshalb bleibt dieser Bereich leer.
-  - d) **FILTER**: eine Filtervariable benötigen wir dieses Mal nicht, weil sich die Daten ja lediglich auf ein Jahr beziehen. Eine weitere Ausscheidung von Attributwerten ist auch nicht notwendig. Dehalb bleibt dieser Bereich auch leer.
-
-<video preload="none" poster="https://user-images.githubusercontent.com/538415/105816543-baf06200-5fb4-11eb-8d23-e9556075a305.jpg" src="https://user-images.githubusercontent.com/2479732/105728095-0ad71680-5f2c-11eb-9533-ed3e6d19e3cd.mp4" controls="controls" muted="muted" style="max-height:640px;"><img alt="06_hundebest_pivot" src="https://user-images.githubusercontent.com/2479732/104046181-f8e13e00-51df-11eb-8c74-4f3e15db1f8f.gif"/></video>
-
-- **Schritt 4:** Damit haben wir nun die Anzahl Hunde pro Stadtquartier als Tabelle. Benenne das Arbeitsblatt wieder, z.B. mit `HundeBest2020_Pivot`.
-
 ### Vergleich zur Anzahl Hunde und Kleinkinder
 Damit wir die Resultate der Anzahl Hunde und Anzahl Kleinkinder pro Stadtquartier vergleichen können, kopieren wir am einfachsten die Resultate der Pivot-Tabellen in ein neues Arbeitsblatt.
 
@@ -150,39 +103,6 @@ Damit wir die Resultate der Anzahl Hunde und Anzahl Kleinkinder pro Stadtquartie
 - **Schritt 3:** Mache das gleiche mit den Werten zur Anzahl Hunde pro Stadtquartier und füge sie mit etwas Abstand rechts ins neue Arbeitsblatt ein. 
 
 <video preload="none" poster="https://user-images.githubusercontent.com/538415/105816678-e410f280-5fb4-11eb-96f2-552408ac88ca.jpg" src="https://user-images.githubusercontent.com/2479732/105728266-3f4ad280-5f2c-11eb-92e2-092bca21b723.mp4" controls="controls" muted="muted" style="max-height:640px;"><img alt="07_results" src="https://user-images.githubusercontent.com/2479732/104167948-86e64000-53fd-11eb-9a1a-152601170a01.gif"/></video>
-
-- **Schritt 4:** Wir haben nun das Problem, dass bei den Kleinkindern die Namen und bei den Hunden die IDs der Stadtquartiere angegeben sind. So lassen sich die Werte nicht vergleichen. Daher braucht es hier noch einen Zwischenschritt, in dem wir eine **Zuordungstabelle** von Stadtquartier-IDs zu den -Namen machen.
-
-  - a) Im Arbeitsblatt `Bevölkerungsbestand` kommen sowohl die Quartiernummer als auch der Quartiernamen vor. Erstelle daher in diesem Arbeitsblatt eine neue PivotTable.
-  
-  - b) Wähle das Feld `QuarSort` und ziehe es ins Feld **WERTE**. 
-  
-  - c) Wähle das Feld `QuarLang` und ziehe es ins Feld **ACHSE**. 
-  
-  - d) Wir wollen nicht die Summe der Quartiernummern, sondern die minimalen Werte wissen. Wähle daher mit rechte Maustaste auf *Summe von QuarSort* und wechsle über die Wertfeldeinstellungen von Wertfeld zusammenfassen als Summe auf **Minimum**.  
-   
-  - e) Damit ist die Zuordnungstabelle erstellt. Jede Stadtquartier-ID hat nun einen entsprechenden Stadtquartiernamen.
-   
-- **Schritt 5:** Kopiere die Zuordnungstabelle ins Arbeitsblatt `Vgl_Kleinkinder_Hunde`.
-
-- **Schritt 6:** Sortiere nun (Menu Daten > Sortieren) wie in der Grafik angezeigt zuerst die Werte der Anzahl Kleinkinder nach der Quartiernummer nach Grösse aufsteigend. Vergleiche ob die Quartiernummern mit jenen der Anzahl Hunde, ebenfalls nach Grösse aufsteigend sortiert, entspricht. Lösche danach die doppelt vorhandenen Spalten und reihe die Attibute nach Deinem Gusto aneinander.
-
-<video preload="none" poster="https://user-images.githubusercontent.com/538415/105817118-7ca77280-5fb5-11eb-8ab7-e4d1c577ad8d.jpg" src="https://user-images.githubusercontent.com/2479732/105728349-57baed00-5f2c-11eb-9f0d-0816cac0298b.mp4" controls="controls" muted="muted" style="max-height:640px;"><img alt="08_zuordungstab" src="https://user-images.githubusercontent.com/2479732/104171823-8badf280-5403-11eb-9dce-42cb5e4f97f9.gif"/></video>
-
-- **Schritt 7:** Berechne in in einer neuen Spalte - im Beispiel namens Diff_Kkinder-Hunde - die Differenz zwischen der Anzahl Kleinkinder und der Anzahl Hunden. Berechne den Wert in der obersten Spalte mit der Formel '=D2 - C2' und ziehe den Punkt unten rechts im grünen Rechteck für alle Quartiere herunter. Die Formel wird so überall korrekt übernommen.
-
-- **Schritt 8:** Sortiere die Differenzen (Spalte E) aufsteigend. Das Resultat ist nun als Tabelle ersichtlich.
-
-- **Schritt 9:** Stelle das Resultat mit PivotChart als Balkendiagramm dar:
-
-  - a) Füge den Quartiernamen im Feld **ACHSE** und die Differenzwerte im Feld **WERTE** ein.
-  - b) Sortiere absteigend nach den Differenzwerten. Klicke dazu in der PivotTable auf das Dropdownzeichen rechts neben *Zeilenbeschriftung*. Klicke auf *Weitere Sortieroptionen*, wähle *Absteigend* und wähle die Differenzwerte aus.
-
-- **Schritt 10:** Ändere den Diagrammtyp auf Balkendiagramm. Klicke mit der rechten Maustaste auf den PivotChart > wähle *Diagrammtyp ändern* > wähle *Balken* > dann *Gruppierte Balken* aus. Layoute das Balkendiagramm (Titel, Höhe, Breite, Farbfüllung, etc.)
-
-- **Schritt 10:** Falls Dir die Grafik noch zu umfangreich ist, kannst Du auch einzelne Bereiche herausfiltern. Gehe dazu wieder wie in Schritt 9b) vor und wähle dieses Mal *Wertefilter* aus. In der Animation werden z.B. nur jene Stadtquartiere angezeigt, wo die Differenz zwischen Kleinkindern und Hunden kleiner als 50 ist. Alle anderen Werte werden nicht angezeigt.
-  
-<video preload="none" poster="https://user-images.githubusercontent.com/538415/105817265-a8c2f380-5fb5-11eb-8d02-b78a1a0cb992.jpg" src="https://user-images.githubusercontent.com/2479732/105728433-7325f800-5f2c-11eb-9517-f60f74ebbdb9.mp4" controls="controls" muted="muted" style="max-height:640px;"><img alt="09_diagr" src="https://user-images.githubusercontent.com/2479732/104203191-26222c00-542c-11eb-8e0a-4c3016d04406.gif"/></video>
 
 # Anhänge
 
@@ -207,8 +127,3 @@ Beispiele:
 - [Getting started with data visualization in R using ggplot2](https://www.storybench.org/getting-started-data-visualization-r-using-ggplot2/)
 - [Rddj - Hand-curated, high quality resources for doing data journalism with R.](https://rddj.info/)
 - [Einführung in Wikidata](https://www.wikidata.org/wiki/Wikidata:Tours), siehe dazu auch das [Trainingsmaterial von Open Data Zürich zu Wikidata](https://github.com/opendatazurich/wikidata-training).
-- Jupyter Notebooks von Open Data Zürich zu
-  - [Geoportal](https://github.com/opendatazurich/opendatazurich.github.io/blob/master/geoportal/Geoportal-Beispiele.ipynb)
-  - [Luftqualitätsmessungen](https://github.com/opendatazurich/quality-checks/blob/master/luftqualitaet/Luftschadstoffdaten%20(1983%20bis%20heute).ipynb)
-  - [Visualisierung von CSV mit Python/matplotlib](https://github.com/opendatazurich/opendatazurich.github.io/blob/master/csv/CSV%20mit%20Python%20verarbeiten%20(matplotlib).ipynb)
-  - [Zürich Tourismus API](https://github.com/opendatazurich/opendatazurich.github.io/blob/master/zt-api/ZuerichTourismusAPI-Beispiele.ipynb)
