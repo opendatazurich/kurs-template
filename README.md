@@ -4,6 +4,16 @@
 
 This template is based on our [dataviz crash course](https://github.com/opendatazurich/crashkurs-dataviz).
 
+## TODO für neuen Kurs
+
+- [ ] Im `_config.yml` die Werte anpassen (insbesondere `title` und `description`)
+- [ ] Kurs-Inhalt in README.me erfassen, Überschrift 1 und 2 (in Markdown mit `#` und `##` markiert) wird als Navigation auf der Seite zur Verfügung gestellt (auf Geräte mit kleinem Bildschirm ist das ausgeblendet). **HINWEIS:** Die erste Überschrift ist absichtlich nicht in der Navigation, das ist für den Haupttitel des Kurses (dies kann in der Datei `assets/js/main.js` angepasst werden, falls nötig).
+- [ ] In den Settings "GitHub Pages" aktivieren (mit Branch `main` und `root`): ![GitHub Pages in den Settings](https://user-images.githubusercontent.com/538415/106585645-d674e300-6547-11eb-8556-39a3fa540547.png)
+
+**Tipp für Bilder und Videos**: am einfachstes ist es die Bilder und Videos direkt in das Eingabefeld eines neuen GitHub Issues einzufügen, dadurch wird das Bild/Video direkt auf GitHub hochgeladen und die URL kann ins README kopiert werden.
+
+<video preload="none" poster="(https://user-images.githubusercontent.com/538415/106586754-1d170d00-6549-11eb-8e7d-d24e0ea4cb13.jpg" src="https://user-images.githubusercontent.com/538415/106586882-3ddf6280-6549-11eb-9db5-9f1ddb7552cc.mp4" controls="controls" muted="muted" style="max-height:640px;"><img alt="GitHub Upload" src="https://user-images.githubusercontent.com/538415/106586824-2d2eec80-6549-11eb-8348-9ddf62f08607.gif"/></video>
+
 # Teil 1: Daten finden
 Zur Beantwortung der Fragestellung benötigen wir die dazu relevanten Daten. Wir müssen uns zuerst auf die Suche machen:
 
